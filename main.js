@@ -35,21 +35,6 @@ function getPlayerName(){
   username = prompt("Enter Your Name:");
 }
 
-function addToHighScore(){
-  localStorage.setItem(username, moves);
-  showHiScore();
-}
-
-function showHiScore(){
-  let hiScr = document.getElementById('highScore');
-  hiScr.style.display = 'block';
-
-  for(i=0; i<localStorage.length; i++){
-    hiScr.innerHTML += localStorage.key(i) + ' ' + localStorage.getItem(localStorage.key(i));
-    hiScr.innerHTML += '</br>';
-  }
-}
-
 function drawMap(m) {
   for (i = 0; i < m.length; i++) {
     collBox.push([]);
@@ -108,7 +93,6 @@ function checkColl() {
           console.log("Win");
           move(rat.newX, rat.newY);
           document.querySelector(".gameMessage").style.display = "block";
-          addToHighScore();
         } else {
           move(rat.newX, rat.newY);
         }

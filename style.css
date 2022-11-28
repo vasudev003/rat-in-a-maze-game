@@ -28,15 +28,3 @@ canvas{
     display: none;
     width: 50%;
 }
-
-#highScore{
-    color: #fff;
-    font-size: 15px;
-    position: absolute;
-    z-index: 99;
-    top: calc(50vh - 100px);
-    left: calc(50vw - 100px);
-    background: black;
-    padding: 50px;
-    display: none;
-}
